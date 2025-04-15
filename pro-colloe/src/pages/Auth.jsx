@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { signIn, signUp } from '../lib/auth';
 import { useNavigate } from 'react-router-dom';
+import '../style/auth.css'; 
 
 export default function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -38,57 +39,58 @@ export default function Auth() {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto mt-10">
-      <h2 className="text-2xl font-bold mb-4">
-        {isSignUp ? 'Sign Up' : 'Sign In'}
-      </h2>
-      {error && <p className="text-red-500 mb-4">{error}</p>}
-      <div className="space-y-4">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        {isSignUp && (
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Confirm Password"
-            className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        )}
-        <button
-          onClick={handleSubmit}
-          className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
+    <div className="auth-container">
+      <div className="auth-form">
+        <h2 className="auth-title">
           {isSignUp ? 'Sign Up' : 'Sign In'}
-        </button>
+        </h2>
+        {error && <p className="auth-error">{error}</p>}
+        <div>
+          <input
+            className="auth-input"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+          <input
+            className="auth-input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+          {isSignUp && (
+            <input
+              className="auth-input"
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Confirm Password"
+            />
+          )}
+          <button
+            className="auth-button"
+            onClick={handleSubmit}
+          >
+            {isSignUp ? 'Sign Up' : 'Sign In'}
+          </button>
+        </div>
+        <p className="auth-switch">
+          {isSignUp ? 'Already have an account?' : "Don't have an account?"}
+          <button
+            onClick={() => {
+              setIsSignUp(!isSignUp);
+              setError(null);
+              setEmail('');
+              setPassword('');
+              setConfirmPassword('');
+            }}
+          >
+            {isSignUp ? 'Sign In' : 'Sign Up'}
+          </button>
+        </p>
       </div>
-      <p className="mt-4 text-center">
-        {isSignUp ? 'Already have an account?' : "Don't have an account?"}
-        <button
-          onClick={() => {
-            setIsSignUp(!isSignUp);
-            setError(null);
-            setEmail('');
-            setPassword('');
-            setConfirmPassword('');
-          }}
-          className="ml-1 text-blue-500 hover:underline"
-        >
-          {isSignUp ? 'Sign In' : 'Sign Up'}
-        </button>
-      </p>
     </div>
   );
 }

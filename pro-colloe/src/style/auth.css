@@ -1,0 +1,128 @@
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #05407c82;
+}
+
+.auth-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #357abd;
+}
+
+.auth-error {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
+.auth-switch button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .auth-container {
+    padding: 0.5rem;
+  }
+
+  .auth-form {
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .auth-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .auth-button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .auth-form {
+    padding: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .auth-form {
+    max-width: 450px;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 1025px) {
+  .auth-form {
+    max-width: 500px;
+  }
+}
