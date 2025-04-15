@@ -42,6 +42,13 @@ export default function Dashboard() {
             <p>Create a new event or view your calendar.</p>
           </div>
         </div>
+        <div className="dashboard-card">
+        <button
+        onClick={() => navigate('/courses')}
+      >
+        Manage Courses
+      </button>
+        </div>
       </div>
     </div>
   );
