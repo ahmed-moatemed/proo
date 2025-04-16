@@ -49,6 +49,13 @@ export default function Dashboard() {
         Manage Courses
       </button>
         </div>
+        <div className="dashboard-card">
+        <button
+        onClick={() => navigate('/schedule')}
+      >
+        عرض الجدول الأسبوعي
+      </button>
+        </div>
       </div>
     </div>
   );

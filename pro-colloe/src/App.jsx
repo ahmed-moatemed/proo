@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
 import Courses from './pages/Courses';
+import Schedule from './pages/Schedule';
 // import Tasks from './pages/Tasks';
 // import Files from './pages/Files';
 
@@ -12,6 +13,7 @@ function App() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/schedule" element={<Schedule />} />
         {/* <Route path="/tasks" element={<Tasks />} />
         <Route path="/files" element={<Files />} /> */}
         <Route path="/" element={<Auth />} />

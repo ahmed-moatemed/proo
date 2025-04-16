@@ -1,0 +1,181 @@
+/* src/styles/schedule.css */
+.schedule-container {
+    /* max-width: 1200px; */
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .schedule-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .week-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .week-navigation button {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .week-navigation button:hover {
+    background-color: #2980b9;
+  }
+  
+  .week-navigation span {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .schedule-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .day-column {
+    flex: 1;
+    min-width: 150px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  .day-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .lectures-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lecture-item {
+    padding: 8px;
+    font-size: 14px;
+    color: #555;
+    border-left: 3px solid #3498db;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+  }
+  
+  /* شاشات التابلت (768px - 1023px) */
+  @media (max-width: 1024px) {
+    .schedule-container {
+      /* max-width: 100%; */
+      padding: 15px;
+    }
+  
+    .schedule-container h2 {
+      font-size: 24px;
+    }
+  
+    .week-navigation span {
+      font-size: 14px;
+    }
+  
+    .week-navigation button {
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+
+    .schedule-grid {
+        flex-direction: column;
+        gap: 10px;
+      }
+  
+    .day-column {
+      min-width: 120px;
+    }
+  
+    .day-column h3 {
+      font-size: 14px;
+    }
+  
+    .lecture-item {
+      font-size: 13px;
+      padding: 6px;
+    }
+  }
+  
+  /* شاشات الموبايل (≤767px) */
+  @media (max-width: 767px) {
+    .schedule-container {
+      padding: 10px;
+    }
+  
+    .schedule-container h2 {
+      font-size: 20px;
+    }
+  
+    .week-navigation {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .week-navigation span {
+      font-size: 13px;
+      text-align: center;
+    }
+  
+    .week-navigation button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  
+    .schedule-grid {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .day-column {
+      min-width: 90%;
+    }
+  
+    .day-column h3 {
+      font-size: 14px;
+    }
+  
+    .lecture-item {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
