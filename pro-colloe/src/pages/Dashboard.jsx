@@ -56,6 +56,13 @@ export default function Dashboard() {
         عرض الجدول الأسبوعي
       </button>
         </div>
+        <div className="dashboard-card">
+        <button
+        onClick={() => navigate('/tasks')}
+      >
+        إدارة المهام
+      </button>
+        </div>
       </div>
     </div>
   );
